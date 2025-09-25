@@ -1,0 +1,50 @@
+Task 3: Interview Questions & Answers
+
+1. What does SELECT \* do?
+   SELECT \* retrieves all columns from a table. It’s useful when you want to see the complete data but not ideal for large tables because it fetches unnecessary columns.
+
+2. How do you filter rows?
+   You filter rows using the WHERE clause with conditions. Examples:
+   SELECT \* FROM Customers WHERE Country = 'India';
+   SELECT \* FROM Products WHERE Price > 500;
+
+3. What is LIKE '%value%'?
+   LIKE is used for pattern matching. % represents zero or more characters.
+
+* 'A%' → matches values starting with A
+* '%sh%' → matches values containing 'sh' anywhere
+
+4. What is BETWEEN used for?
+   BETWEEN is used to filter values within a range (inclusive).
+   Example:
+   SELECT \* FROM Customers WHERE Contact BETWEEN 9000000000 AND 9999999999;
+
+5. How do you limit output rows?
+   Use LIMIT to restrict the number of rows returned.
+   Example:
+   SELECT \* FROM Customers LIMIT 5;
+
+6. Difference between = and IN
+   \= checks for a single value.
+   IN allows checking against multiple values at once.
+   Example:
+   WHERE Country = 'India';
+   WHERE Country IN ('India','USA');
+
+7. How to sort in descending order?
+   Use ORDER BY column DESC.
+   Example:
+   SELECT \* FROM Customers ORDER BY First\_Name DESC;
+
+8. What is aliasing?
+   Aliasing is renaming a column or table for readability using AS.
+   Example:
+   SELECT First\_Name AS Name, Last\_Name AS Surname FROM Customers;
+
+9. Explain DISTINCT.
+   DISTINCT removes duplicate values in the result set.
+   Example:
+   SELECT DISTINCT Country FROM Customers;
+
+10. What is the default sort order?
+    The default sort order is ascending (ASC) when using ORDER BY without specifying ASC or DESC.
